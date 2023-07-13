@@ -3,6 +3,11 @@ import styled from "styled-components";
 
 const HomeContainer = styled.section`
   display: grid;
+  grid-template-columns: 1fr;
+`;
+
+const HeroContainer = styled.div`
+  display: grid;
   grid-template-columns: 1fr 1fr;
 `;
 
@@ -18,29 +23,50 @@ const HeroImage = styled.div`
 const HeroTitle = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   background-color: #ff6b57;
   padding-top: 40px;
   align-items: center;
+  text-align: center;
   justify-content: center;
+`;
+
+const HighlightedContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px;
+`;
+
+const AboutContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+`;
+
+const TestimonialsContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 20px;
 `;
 
 export const App = () => {
   return (
     <HomeContainer>
-      <HeroImage>
-        <div>Image of me</div>
-      </HeroImage>
-      <HeroTitle>
-        <image>logo</image>
-        <h1>Ida Utterström</h1>
-        <h2>
-          Project manager, Business strategy, Marketing, People experience, Web
-          development
-        </h2>
-        <button>Button</button>
-      </HeroTitle>
-      <div>
+      <HeroContainer>
+        <HeroImage>
+          <image>Image of me</image>
+        </HeroImage>
+        <HeroTitle>
+          <image>logo</image>
+          <h1>Ida Utterström</h1>
+          <h2>
+            Project manager, Business strategy, Marketing, People experience,
+            Web development
+          </h2>
+          <button>Button</button>
+        </HeroTitle>
+      </HeroContainer>
+      <HighlightedContainer>
         <div>
           <image>x</image>
           <h2>Resume</h2>
@@ -56,36 +82,38 @@ export const App = () => {
           <h2>Hobbies</h2>
           <button>X</button>
         </div>
-      </div>
-      <div>
-        <image>x</image>
-        <h2>Business mindset</h2>
-        <p>
-          Throughout my career, I have consistently demonstrated strong
-          strategic thinking, creative visualization, and the ability to execute
-          tasks effectively. These attributes have enabled me to excel in
-          diverse environments and embrace new challenges.
-        </p>
-      </div>
-      <div>
-        <image>x</image>
-        <h2>Agility</h2>
-        <p>
-          I bring a dynamic approach, fostering adaptability, collaboration, and
-          continuous improvement, driving projects in an ever-changing
-          environment.
-        </p>
-      </div>
-      <div>
-        <image>x</image>
-        <h2>Creativity</h2>
-        <p>
-          My creative mindset allows me to approach problems from different
-          perspectives, uncovering opportunities for growth and improvement.
-        </p>
-      </div>
-      <div>
-        <h2>testimonials</h2>
+      </HighlightedContainer>
+      <AboutContainer>
+        <div>
+          <image>x</image>
+          <h2>Business mindset</h2>
+          <p>
+            Throughout my career, I have consistently demonstrated strong
+            strategic thinking, creative visualization, and the ability to
+            execute tasks effectively. These attributes have enabled me to excel
+            in diverse environments and embrace new challenges.
+          </p>
+        </div>
+        <div>
+          <image>x</image>
+          <h2>Agility</h2>
+          <p>
+            I bring a dynamic approach, fostering adaptability, collaboration,
+            and continuous improvement, driving projects in an ever-changing
+            environment.
+          </p>
+          <div>
+            <image>x</image>
+            <h2>Creativity</h2>
+            <p>
+              My creative mindset allows me to approach problems from different
+              perspectives, uncovering opportunities for growth and improvement.
+            </p>
+          </div>
+        </div>
+      </AboutContainer>
+      <h2>Things that have been said about me</h2>
+      <TestimonialsContainer>
         <div>
           <image>x</image>
           <p>
@@ -121,6 +149,11 @@ export const App = () => {
             set up."
           </p>
         </div>
+      </TestimonialsContainer>
+      <div>
+        <image>Logo</image>
+        <h1>Contact me</h1>
+        <button>contact</button>
       </div>
     </HomeContainer>
   );
